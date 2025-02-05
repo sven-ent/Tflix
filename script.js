@@ -46,4 +46,6 @@ function searchMovies() {
         movie.style.display = title.includes(searchValue) ? 'block' : 'none';
     });
 }
-
+const urlParams = new URLSearchParams(window.location.search);
+const movieTitle = urlParams.get('title');
+document.querySelector('h1').textContent = movieTitle;
