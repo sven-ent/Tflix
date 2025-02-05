@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Channel Name -->
-<div class="channel-name">
-  <h1>Tflix - Movie Channel</h1>
-</div>
-  <head>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tflix movie</title>
+  <title>Movie Library</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Channel Name -->
+  <div class="channel-name">
+    <h1>Tflix - Movie Channel</h1>
+  </div>
+
+  <!-- Latest Updates Slider -->
+  <div class="slider-container">
+    <div class="slider">
+      <a href="movie1.html">
+        <img src="movie1-poster.jpg" alt="Movie 1" class="slider-image">
+        <div class="slider-caption">Movie 1</div>
+      </a>
+      <a href="movie2.html">
+        <img src="movie2-poster.jpg" alt="Movie 2" class="slider-image">
+        <div class="slider-caption">Movie 2</div>
+      </a>
+      <a href="movie3.html">
+        <img src="movie3-poster.jpg" alt="Movie 3" class="slider-image">
+        <div class="slider-caption">Movie 3</div>
+      </a>
+    </div>
+  </div>
 
   <!-- Main Container -->
   <div class="container">
@@ -20,7 +39,7 @@
       <input type="text" id="search" placeholder="Search for a movie..." onkeyup="searchMovies()">
     </div>
 
-    <!-- Movie Grid -->
+    <!-- Movie Grid - 3x2 layout -->
     <div class="movie-grid">
       <div class="row">
         <!-- Movie Item 1 -->
@@ -44,6 +63,8 @@
             <h3>Movie 3</h3>
           </a>
         </div>
+      </div>
+      <div class="row">
         <!-- Movie Item 4 -->
         <div class="movie-item">
           <a href="movie4.html">
@@ -51,8 +72,6 @@
             <h3>Movie 4</h3>
           </a>
         </div>
-      </div>
-      <div class="row">
         <!-- Movie Item 5 -->
         <div class="movie-item">
           <a href="movie5.html">
@@ -65,20 +84,6 @@
           <a href="movie6.html">
             <img src="movie6-poster.jpg" alt="Movie 6" class="movie-poster">
             <h3>Movie 6</h3>
-          </a>
-        </div>
-        <!-- Movie Item 7 -->
-        <div class="movie-item">
-          <a href="movie7.html">
-            <img src="movie7-poster.jpg" alt="Movie 7" class="movie-poster">
-            <h3>Movie 7</h3>
-          </a>
-        </div>
-        <!-- Movie Item 8 -->
-        <div class="movie-item">
-          <a href="movie8.html">
-            <img src="movie8-poster.jpg" alt="Movie 8" class="movie-poster">
-            <h3>Movie 8</h3>
           </a>
         </div>
       </div>
