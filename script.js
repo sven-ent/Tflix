@@ -46,5 +46,5 @@ function searchMovies() {
     });
 }
 function openMovie(title) {
-    window.location.href = `https://your-description-repo.github.io/movie.html?title=${encodeURIComponent(title)}`;
+    window.location.href = `https://https://7ent2.github.io/Tflixdata/?title=${encodeURIComponent(title)}`;
 }
