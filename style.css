@@ -38,10 +38,10 @@ body {
   border: none;
 }
 
-/* Movie Grid (2 Columns Layout) */
+/* Movie Grid (Two Vertical Rows) */
 .movie-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  grid-template-columns: 50% 50%; /* Two equal vertical columns */
   gap: 20px;
   padding: 20px;
   justify-items: center;
@@ -65,6 +65,7 @@ body {
 .movie-item {
   position: relative;
   text-align: center;
+  width: 100%;
 }
 
 /* Hover Preview */
@@ -86,7 +87,6 @@ body {
 
 .movie-item:hover .hover-preview {
   display: flex;
-}
 }
 
 body {
