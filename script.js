@@ -31,8 +31,9 @@ fetch('movies.json')
     });
 
 // Open movie page
-function openMovie(movieUrl) {
-    window.location.href = movieUrl;
+function openMovie(title) {
+    window.location.href = `https://7ent2.github.io/Tflixdata/movie.html?title=${encodeURIComponent(title)}`;
+}
 }
 
 // Search movies
@@ -45,6 +46,4 @@ function searchMovies() {
         movie.style.display = title.includes(searchValue) ? 'block' : 'none';
     });
 }
-function openMovie(title) {
-    window.location.href = `https://https://7ent2.github.io/Tflixdata/?title=${encodeURIComponent(title)}`;
-}
+
