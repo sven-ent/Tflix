@@ -45,3 +45,6 @@ function searchMovies() {
         movie.style.display = title.includes(searchValue) ? 'block' : 'none';
     });
 }
+function openMovie(title) {
+    window.location.href = `https://your-description-repo.github.io/movie.html?title=${encodeURIComponent(title)}`;
+}
