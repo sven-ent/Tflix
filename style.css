@@ -20,7 +20,7 @@ body {
 .channel-name h1 {
   font-size: 3rem;
   font-weight: bold;
-  color: #e50914; /* Netflix red color */
+  color: #e50914; /*red color */
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 20px;
@@ -78,7 +78,7 @@ body {
   font-weight: bold;
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px;
+  padding: 20px;
   border-radius: 5px;
 }
 
