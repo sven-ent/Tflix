@@ -27,20 +27,3 @@ function filterMovies() {
     }
   });
 }
-
-/* Handle Star Rating */
-const stars = document.querySelectorAll(".movie-rating .star");
-
-stars.forEach((star) => {
-  star.addEventListener("click", () => {
-    const rating = star.getAttribute("data-rating");
-
-    // Remove selected class from all stars
-    stars.forEach((s) => s.classList.remove("selected"));
-
-    // Add selected class to stars up to the clicked rating
-    for (let i = 0; i < rating; i++) {
-      stars[i].classList.add("selected");
-    }
-  });
-}
