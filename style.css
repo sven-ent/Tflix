@@ -41,7 +41,8 @@ body {
 /* Movie Grid (Two Vertical Rows) */
 .movie-grid {
   display: grid;
-  grid-template-columns: 50% 50%; /* Two equal vertical columns */
+  grid-template-columns: repeat(2, 1fr); /* Two columns in each row */
+  grid-template-rows: repeat(2, auto); /* Two rows */
   gap: 20px;
   padding: 20px;
   justify-items: center;
