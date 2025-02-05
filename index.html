@@ -3,48 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Movie Library</title>
+  <title>Tflix movie</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Search Bar -->
-  <div class="search-bar">
-    <input type="text" id="search" placeholder="Search for a movie..." onkeyup="searchMovies()">
-  </div>
 
-  <!-- Genre Filter -->
-  <div class="genre-filter">
-    <label for="genre">Filter by Genre:</label>
-    <select id="genre" name="genre" onchange="filterMovies()">
-      <option value="all">All</option>
-      <option value="action">Action</option>
-      <option value="comedy">Comedy</option>
-      <option value="drama">Drama</option>
-    </select>
-  </div>
+  <!-- Main Container -->
+  <div class="container">
+    
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <input type="text" id="search" placeholder="Search for a movie..." onkeyup="searchMovies()">
+    </div>
 
-  <!-- Movie Grid -->
-  <div class="movie-grid">
-    <div class="movie-item action">
-     <a href="https://7ent2.github.io/Tflixdata/movie1.html">
-       <img src="movie1-poster.jpg" alt="Movie 1" class="movie-poster">
-      <h3>Movie 1</h3>
-      <div class="hover-preview">
-        <p>A great action movie</p>
+    <!-- Movie Grid -->
+    <div class="movie-grid">
+      <div class="row">
+        <!-- Movie Item 1 -->
+        <div class="movie-item">
+          <a href="movie1.html">
+            <img src="movie1-poster.jpg" alt="Movie 1" class="movie-poster">
+            <h3>Movie 1</h3>
+          </a>
+        </div>
+        <!-- Movie Item 2 -->
+        <div class="movie-item">
+          <a href="movie2.html">
+            <img src="movie2-poster.jpg" alt="Movie 2" class="movie-poster">
+            <h3>Movie 2</h3>
+          </a>
+        </div>
+        <!-- Movie Item 3 -->
+        <div class="movie-item">
+          <a href="movie3.html">
+            <img src="movie3-poster.jpg" alt="Movie 3" class="movie-poster">
+            <h3>Movie 3</h3>
+          </a>
+        </div>
+        <!-- Movie Item 4 -->
+        <div class="movie-item">
+          <a href="movie4.html">
+            <img src="movie4-poster.jpg" alt="Movie 4" class="movie-poster">
+            <h3>Movie 4</h3>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Movie Item 5 -->
+        <div class="movie-item">
+          <a href="movie5.html">
+            <img src="movie5-poster.jpg" alt="Movie 5" class="movie-poster">
+            <h3>Movie 5</h3>
+          </a>
+        </div>
+        <!-- Movie Item 6 -->
+        <div class="movie-item">
+          <a href="movie6.html">
+            <img src="movie6-poster.jpg" alt="Movie 6" class="movie-poster">
+            <h3>Movie 6</h3>
+          </a>
+        </div>
+        <!-- Movie Item 7 -->
+        <div class="movie-item">
+          <a href="movie7.html">
+            <img src="movie7-poster.jpg" alt="Movie 7" class="movie-poster">
+            <h3>Movie 7</h3>
+          </a>
+        </div>
+        <!-- Movie Item 8 -->
+        <div class="movie-item">
+          <a href="movie8.html">
+            <img src="movie8-poster.jpg" alt="Movie 8" class="movie-poster">
+            <h3>Movie 8</h3>
+          </a>
+        </div>
       </div>
     </div>
-    <div class="movie-item comedy">
-      <img src="movie2-poster.jpg"
+    
+  </div>
 
-          <!-- Movie Grid -->
-  <div class="movie-grid">
-    <div class="movie-item sci-fi">
-     <a href="https://7ent2.github.io/Tflixdata/movie1.html">
-       <img src="movie2-poster.jpg" alt="Movie 2" class="movie-poster">
-      <h3>Movie 1</h3>
-      <div class="hover-preview">
-        <p>A great sci fi movie</p>
-      </div>
-    </div>
-    <div class="movie-item sci-fi">
-      <img src="movie2-poster.jpg"
+  <script src="script.js"></script>
+</body>
+</html>
