@@ -1,28 +1,47 @@
-// Auto-scroll for the slider
-let index = 0;
-const slides = document.querySelectorAll('.slider a');
-const totalSlides = slides.length;
+fetch('movies.json')
+    .then(response => response.json())
+    .then(movies => {
+        let sliderContainer = document.querySelector('.slider-container');
+        let movieGrid = document.querySelector('.movie-grid');
 
-function nextSlide() {
-  index = (index + 1) % totalSlides; // Loop back to the first slide
-  const slider = document.querySelector('.slider');
-  slider.style.transform = `translateX(-${index * 100}%)`;
+        // Find latest movie
+        let latestMovie = movies.find(movie => movie.latest);
+        let otherMovies = movies.filter(movie => !movie.latest);
+
+        // Add latest movie to slider
+        if (latestMovie) {
+            sliderContainer.innerHTML = `
+                <div class="slide" onclick="openMovie('${latestMovie.link}')">
+                    <img src="images/${latestMovie.image}" alt="${latestMovie.title}">
+                    <div class="overlay">${latestMovie.title}</div>
+                </div>
+            `;
+        }
+
+        // Add all movies to grid
+        otherMovies.forEach(movie => {
+            let movieHTML = `
+                <div class="movie" onclick="openMovie('${movie.link}')">
+                    <img src="images/${movie.image}" alt="${movie.title}">
+                    <div class="title">${movie.title}</div>
+                </div>
+            `;
+            movieGrid.innerHTML += movieHTML;
+        });
+    });
+
+// Open movie page
+function openMovie(movieUrl) {
+    window.location.href = movieUrl;
 }
 
-// Automatically move to the next slide every 5 seconds
-setInterval(nextSlide, 5000);
-
-// Function to search movies by title
+// Search movies
 function searchMovies() {
-  let searchQuery = document.getElementById('search').value.toLowerCase();
-  let movieItems = document.querySelectorAll('.movie-item');
+    let searchValue = document.getElementById('searchBar').value.toLowerCase();
+    let movies = document.querySelectorAll('.movie');
 
-  movieItems.forEach(function(movieItem) {
-    let title = movieItem.querySelector('h3').innerText.toLowerCase();
-    if (title.indexOf(searchQuery) !== -1) {
-      movieItem.style.display = 'block'; // Show the movie item
-    } else {
-      movieItem.style.display = 'none'; // Hide the movie item
-    }
-  });
+    movies.forEach(movie => {
+        let title = movie.querySelector('.title').textContent.toLowerCase();
+        movie.style.display = title.includes(searchValue) ? 'block' : 'none';
+    });
 }
