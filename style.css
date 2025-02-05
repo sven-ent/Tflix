@@ -3,89 +3,87 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #141414; /* Black background */
+  color: white; /* White text color */
+}
+
+.container {
+  padding: 20px;
 }
 
 /* Search Bar Styles */
 .search-bar {
   text-align: center;
-  margin: 20px 0;
+  margin-bottom: 20px;
 }
 
 .search-bar input {
-  padding: 10px;
+  padding: 12px;
   font-size: 1rem;
   width: 80%;
-  max-width: 500px;
+  max-width: 600px;
   border-radius: 5px;
   border: 1px solid #ccc;
-  background-color: #fff;
-  color: #333;
+  background-color: #222; /* Dark grey background */
+  color: white;
 }
 
-/* Genre Filter Styles */
-.genre-filter {
-  text-align: center;
-  margin: 20px 0;
+.search-bar input::placeholder {
+  color: #aaa; /* Light grey placeholder */
 }
 
-.genre-filter select {
-  padding: 10px;
-  font-size: 1rem;
-  background-color: #fff;
-  color: #333;
-  border-radius: 5px;
-  border: none;
-}
-
-/* Movie Grid (Two Vertical Rows) */
+/* Movie Grid Layout */
 .movie-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns in each row */
-  grid-template-rows: repeat(2, auto); /* Two rows */
   gap: 20px;
-  padding: 20px;
-  justify-items: center;
+  grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+  margin-top: 20px;
 }
 
-/* Movie Poster Styling */
-.movie-grid img {
+/* Movie Item Styling */
+.movie-item {
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.movie-item:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 0, 0, 0.1); /* Light red background on hover */
+}
+
+.movie-item img {
   width: 100%;
   height: auto;
   border-radius: 8px;
   transition: transform 0.3s ease;
 }
 
-/* Hover effect for images */
-.movie-grid img:hover {
-  transform: scale(1.1);
-  cursor: pointer;
-}
-
-/* Movie Item */
-.movie-item {
-  position: relative;
-  text-align: center;
-  width: 100%;
-}
-
-/* Hover Preview */
-.hover-preview {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+.movie-item a {
+  text-decoration: none;
   color: white;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-  border-radius: 8px;
 }
 
-.movie-item:hover .hover-preview {
-  display: flex;
+.movie-item a:hover h3 {
+  color: #e50914; 
+}
+
+.movie-item h3 {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white; /* White text for movie titles */
+}
+
+/* Responsive Grid Layout */
+@media (max-width: 768px) {
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-grid {
+    grid-template-columns: 1fr; /* 1 item per row for mobile screens */
+  }
 }
