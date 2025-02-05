@@ -1,3 +1,105 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Search Bar Styles */
+.search-bar {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.search-bar input {
+  padding: 10px;
+  font-size: 1rem;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Genre Filter Styles */
+.genre-filter {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.genre-filter select {
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #333;
+  border-radius: 5px;
+  border: none;
+}
+
+/* Movie Grid */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+}
+
+/* Movie Poster Styling */
+.movie-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for images */
+.movie-grid img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* Movie Item */
+.movie-item {
+  position: relative;
+  text-align: center;
+}
+
+/* Hover Preview */
+.hover-preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.movie-item:hover .hover-preview {
+  display: flex;
+}
+
+/* Movie Rating Styles */
+.movie-rating .star {
+  font-size: 30px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.movie-rating .star:hover,
+.movie-rating .star.selected {
+  color: #ff6f61;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
