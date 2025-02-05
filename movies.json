@@ -1,0 +1,20 @@
+[
+    {
+        "title": "New Movie",
+        "image": "new-movie.jpg",
+        "link": "new-movie.html",
+        "latest": true
+    },
+    {
+        "title": "Movie 1",
+        "image": "movie1.jpg",
+        "link": "movie1.html",
+        "latest": false
+    },
+    {
+        "title": "Movie 2",
+        "image": "movie2.jpg",
+        "link": "movie2.html",
+        "latest": false
+    }
+]
