@@ -1,3 +1,17 @@
+/* Channel Name Styling */
+.channel-name {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.channel-name h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #e50914; /* Netflix red color */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
 /* Global Styles */
 body {
   font-family: Arial, sans-serif;
