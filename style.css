@@ -7,7 +7,7 @@
 .channel-name h1 {
   font-size: 3rem;
   font-weight: bold;
-  color: #e50914; /* Netflix red color */
+  color: #e50914; /*red color */
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 20px;
@@ -28,7 +28,7 @@ body {
 /* Search Bar Styles */
 .search-bar {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .search-bar input {
