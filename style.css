@@ -38,10 +38,10 @@ body {
   border: none;
 }
 
-/* Movie Grid */
+/* Movie Grid (2 Columns Layout) */
 .movie-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
   gap: 20px;
   padding: 20px;
   justify-items: center;
@@ -87,17 +87,6 @@ body {
 .movie-item:hover .hover-preview {
   display: flex;
 }
-
-/* Movie Rating Styles */
-.movie-rating .star {
-  font-size: 30px;
-  color: #ccc;
-  cursor: pointer;
-}
-
-.movie-rating .star:hover,
-.movie-rating .star.selected {
-  color: #ff6f61;
 }
 
 body {
